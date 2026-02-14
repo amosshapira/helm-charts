@@ -88,3 +88,18 @@ insecureTokenValue: ""
 # https://github.com/grafana/pdc-agent/blob/main/pkg/pdc/client.go
 # https://github.com/grafana/pdc-agent/blob/main/cmd/pdc/main.go
 extraArgs: []
+
+# -- Additional environment variables to pass to the pdc-agent container
+# Can be used to set any environment variables needed by the agent
+env: {}
+ # Example:
+ # MY_CUSTOM_VAR: "my-value"
+ # ANOTHER_VAR: "another-value"
+
+# -- Additional environment variables from ConfigMaps or Secrets
+envFrom: []
+ # Example:
+ # - configMapRef:
+ # name: my-config
+ # - secretRef:
+ # name: my-secret
